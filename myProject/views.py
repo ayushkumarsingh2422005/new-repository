@@ -2,13 +2,15 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 import urllib.request
-data_raw = urllib.request.urlopen('https://api2.sololearn.com/v2/codeplayground/usercodes/c5I5H9T7viyb')
-print(data_raw)
+
 #text = ''
 
 def index(request):
     text = request.GET.get('aks')
+    data_raw = urllib.request.urlopen('https://api2.sololearn.com/v2/codeplayground/usercodes/c5I5H9T7viyb')
+    print(data_raw)
     return HttpResponse(text)
+
 
 def index1(request):
     #prams = {'name':'ayush','class':'12'}
