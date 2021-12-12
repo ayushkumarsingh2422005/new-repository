@@ -8,7 +8,7 @@ import requests
 def index(request):
     text = request.GET.get('aks')
     data_raw = requests.get('https://api2.sololearn.com/v2/codeplayground/usercodes/c5I5H9T7viyb')
-    print(data_raw)
+    print(data_raw.json())
     return HttpResponse(text)
 
 
